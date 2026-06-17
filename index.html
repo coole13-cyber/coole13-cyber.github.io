@@ -1,151 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Litchfields Flower Shop | Local Florist in Litchfield, MN</title>
-    <!-- Elegant Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-rose: #d4a3a3;
-            --sage-green: #8da08e;
-            --cream: #fffdfa;
-            --dark-charcoal: #2d2d2d;
-            --gold: #c5a059;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; background-color: var(--cream); color: var(--dark-charcoal); line-height: 1.7; }
-        h1, h2, h3, .nav-logo { font-family: 'Playfair Display', serif; }
-
-        /* Navigation */
-        nav { 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 20px 8%; background: var(--white); border-bottom: 1px solid #eee;
-            position: sticky; top: 0; z-index: 1000; background: rgba(255, 253, 250, 0.95);
-        }
-        .nav-logo { font-size: 1.8rem; font-weight: 700; color: var(--primary-rose); text-decoration: none; }
-        .nav-links a { text-decoration: none; color: var(--dark-charcoal); margin-left: 30px; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
-        .nav-cta { color: var(--gold) !important; font-weight: bold; border-bottom: 1px solid var(--gold); padding-bottom: 3px; }
-
-        /* Hero Section */
-        .hero { 
-            height: 80vh; display: flex; align-items: center; justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=1500');
-            background-size: cover; background-position: center; text-align: center; color: white;
-        }
-        .hero-content { background: rgba(255,255,255,0.9); color: var(--dark-charcoal); padding: 50px 80px; border-radius: 2px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; font-style: italic; }
-        .hero p { font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; color: var(--sage-green); }
-
-        /* Featured Categories */
-        .featured { padding: 80px 8%; text-align: center; }
-        .section-tag { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 10px; display: block; }
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-        .cat-item { position: relative; overflow: hidden; height: 400px; cursor: pointer; }
-        .cat-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .cat-item:hover img { transform: scale(1.05); }
-        .cat-overlay { position: absolute; bottom: 30px; left: 30px; right: 30px; background: white; padding: 20px; text-align: center; }
-
-        /* Info Section */
-        .shop-info { background: #f4f1ee; padding: 60px 8%; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 40px; }
-        .info-block { text-align: center; max-width: 300px; }
-        .info-block i { color: var(--primary-rose); font-size: 1.5rem; margin-bottom: 15px; }
-        .info-block h3 { margin-bottom: 10px; font-size: 1.2rem; }
-
-        /* Footer */
-        footer { padding: 80px 8% 40px; background: var(--dark-charcoal); color: #999; text-align: center; }
-        footer h2 { color: white; margin-bottom: 30px; letter-spacing: 2px; }
-        .footer-links { margin-bottom: 40px; }
-        .footer-links a { color: #ccc; margin: 0 15px; text-decoration: none; font-size: 0.9rem; }
-        .copyright { font-size: 0.8rem; border-top: 1px solid #333; padding-top: 40px; margin-top: 40px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero-content { padding: 30px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick Plumbing & Heating | Litchfield, MN</title>
+  <meta name="description" content="Professional plumbing and heating services in Litchfield, MN. Call Rick Plumbing & Heating at (320) 693-3611.">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="nav-logo">Litchfields</a>
-        <div class="nav-links">
-            <a href="#">Occasions</a>
-            <a href="#">Weddings</a>
-            <a href="#">Sympathy</a>
-            <a href="tel:3205931098" class="nav-cta">Call (320) 593-1098</a>
-        </div>
-    </nav>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <span><i class="fa-solid fa-location-dot"></i> 22 E 3rd St, Litchfield, MN 55355</span>
+        <span><i class="fa-solid fa-clock"></i> Opens 7:30 AM Wed</span>
+      </div>
+    </div>
+  </div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <span class="section-tag">Established Local Florist</span>
-            <h1>Beautifully Curated</h1>
-            <p>Fresh Blooms for Every Moment</p>
-        </div>
-    </header>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-wrench"></i> Rick <span>Plumbing & Heating</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+13206933611" class="btn btn-primary"><i class="fa-solid fa-phone"></i> (320) 693-3611</a>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <section class="shop-info">
-        <div class="info-block">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Our Studio</h3>
-            <p>338 E Hwy 12<br>Litchfield, MN 55355</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Reliable Plumbing & Heating in Litchfield, MN</h1>
+      <p>Fast, professional, and trusted by the community. We handle everything from leaky pipes to furnace installations.</p>
+      <div class="hero-buttons">
+        <a href="tel:+13206933611" class="btn btn-primary btn-large">Call Us Now</a>
+        <a href="#contact" class="btn btn-secondary btn-large">Get Directions</a>
+      </div>
+      <div class="trust-badge">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
         </div>
-        <div class="info-block">
-            <i class="fas fa-truck"></i>
-            <h3>Local Delivery</h3>
-            <p>Hand-delivered with care to Litchfield and surrounding areas.</p>
-        </div>
-        <div class="info-block">
-            <i class="fas fa-heart"></i>
-            <h3>Custom Designs</h3>
-            <p>Our florists create unique arrangements tailored to your story.</p>
-        </div>
-    </section>
+        <span><strong>4.2</strong> (17 Reviews) on Google</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="featured">
-        <span class="section-tag">Our Collection</span>
-        <h2>Shop by Occasion</h2>
-        <div class="category-grid">
-            <div class="cat-item">
-                <img src="https://images.unsplash.com/photo-1523606772308-64a28db4ef2c?auto=format&fit=crop&q=80&w=600" alt="Birthdays">
-                <div class="cat-overlay">
-                    <h3>Birthdays</h3>
-                </div>
+  <!-- Services Section -->
+  <section id="services" class="services section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive plumbing and heating solutions for your home or business.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon blue">
+            <i class="fa-solid fa-faucet-drip"></i>
+          </div>
+          <h3>Plumbing Repairs</h3>
+          <p>From leaky faucets to burst pipes, our experienced plumbers provide fast and effective repair services.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon orange">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3>Heating Systems</h3>
+          <p>Furnace repair, maintenance, and installation to keep your home warm during the cold Minnesota winters.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon blue">
+            <i class="fa-solid fa-bath"></i>
+          </div>
+          <h3>Installations</h3>
+          <p>Professional installation of water heaters, toilets, sinks, and complete HVAC systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Reviews Section -->
+  <section id="reviews" class="reviews section-padding bg-light">
+    <div class="container">
+      <div class="reviews-layout">
+        <div class="reviews-text">
+          <h2>Trusted by Litchfield Residents</h2>
+          <p>At Rick Plumbing & Heating, we pride ourselves on delivering top-notch service with a focus on customer satisfaction. With a 4.2-star rating from our local community, you can trust us to get the job done right.</p>
+          <a href="https://maps.google.com/?q=Rick+Plumbing+%26+Heating+22+E+3rd+St,+Litchfield,+MN+55355" target="_blank" class="btn btn-outline">Read Our Reviews <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="review-highlight">
+          <div class="review-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
-            <div class="cat-item">
-                <img src="https://images.unsplash.com/photo-1519225495810-7517c3365827?auto=format&fit=crop&q=80&w=600" alt="Weddings">
-                <div class="cat-overlay">
-                    <h3>Weddings</h3>
-                </div>
-            </div>
-            <div class="cat-item">
-                <img src="https://images.unsplash.com/photo-1558236714-d1ae623253fa?auto=format&fit=crop&q=80&w=600" alt="Romance">
-                <div class="cat-overlay">
-                    <h3>Anniversary</h3>
-                </div>
-            </div>
+            <p>"Excellent service! They came out quickly when our furnace stopped working and had it fixed in no time. Highly recommend Rick and his team."</p>
+            <span class="reviewer">- Local Customer</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <h2>Litchfields Flower Shop</h2>
+  <!-- Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Visit or Contact Us</h2>
+        <p>We're here to help with all your plumbing and heating needs.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Address</h4>
+              <p>22 E 3rd St<br>Litchfield, MN 55355</p>
+              <a href="https://maps.google.com/?q=22+E+3rd+St,+Litchfield,+MN+55355" target="_blank" class="text-link">Get Directions</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>(320) 693-3611</p>
+              <a href="tel:+13206933611" class="text-link">Call Now</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Opens 7:30 AM Wednesday<br><em>Call for standard operating hours and emergency services.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <!-- Placeholder for Google Maps iframe -->
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>Litchfield, Minnesota</h3>
+            <p>Plus Code: 4FHF+93</p>
+            <a href="https://maps.google.com/?q=22+E+3rd+St,+Litchfield,+MN+55355" target="_blank" class="btn btn-primary mt-3">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3><i class="fa-solid fa-wrench"></i> Rick Plumbing & Heating</h3>
+          <p>Your trusted local experts in Litchfield, MN.</p>
+        </div>
         <div class="footer-links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Delivery Policy</a>
+          <h4>Quick Links</h4>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
         </div>
-        <p><i class="fas fa-phone"></i> (320) 593-1098</p>
-        <p><i class="fas fa-map-pin"></i> 338 E Hwy 12, Litchfield, MN</p>
-        <div class="copyright">
-            &copy; 2023 Litchfields Flower Shop. Hand-crafted in Minnesota.
-        </div>
-    </footer>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Rick Plumbing & Heating. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
+  <script src="scripts.js"></script>
 </body>
 </html>
