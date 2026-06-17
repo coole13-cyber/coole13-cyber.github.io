@@ -1,198 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rick Plumbing & Heating | Litchfield, MN</title>
-  <meta name="description" content="Professional plumbing and heating services in Litchfield, MN. Call Rick Plumbing & Heating at (320) 693-3611.">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Plumbing & Heating | Litchfield, MN</title>
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #d9534f;
+            --dark: #333;
+            --light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--dark); }
+
+        /* Header & Nav */
+        header { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo h1 { color: var(--primary); font-size: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: bold; }
+        .cta-btn { background: var(--secondary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&q=80&w=1500') no-repeat center center/cover; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h2 { font-size: 3rem; margin-bottom: 10px; }
+        .rating { font-size: 1.2rem; color: #ffcc00; margin-bottom: 20px; }
+
+        /* Info Section */
+        .info-strip { background: var(--primary); color: white; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
+        .info-item i { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+
+        /* Content Sections */
+        section { padding: 60px 10%; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--light); padding: 30px; border-radius: 8px; text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 40px 10%; text-align: center; }
+        .map-link { color: #aaa; text-decoration: none; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .nav-links { margin-top: 15px; }
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-bar-content">
-        <span><i class="fa-solid fa-location-dot"></i> 22 E 3rd St, Litchfield, MN 55355</span>
-        <span><i class="fa-solid fa-clock"></i> Opens 7:30 AM Wed</span>
-      </div>
-    </div>
-  </div>
+    <header>
+        <div class="logo">
+            <h1>Rick Plumbing & Heating</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="tel:3206933611" class="cta-btn"><i class="fas fa-phone"></i> (320) 693-3611</a>
+        </nav>
+    </header>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="logo">
-        <i class="fa-solid fa-wrench"></i> Rick <span>Plumbing & Heating</span>
-      </a>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="tel:+13206933611" class="btn btn-primary"><i class="fa-solid fa-phone"></i> (320) 693-3611</a>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
+    <section class="hero">
+        <h2>Expert Plumbing & Heating Services</h2>
+        <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <span>4.2 (17 Reviews)</span>
+        </div>
+        <p>Serving Litchfield, MN with reliable and professional care.</p>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>Reliable Plumbing & Heating in Litchfield, MN</h1>
-      <p>Fast, professional, and trusted by the community. We handle everything from leaky pipes to furnace installations.</p>
-      <div class="hero-buttons">
-        <a href="tel:+13206933611" class="btn btn-primary btn-large">Call Us Now</a>
-        <a href="#contact" class="btn btn-secondary btn-large">Get Directions</a>
-      </div>
-      <div class="trust-badge">
-        <div class="stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
+    <div class="info-strip">
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            22 E 3rd St, Litchfield, MN 55355
         </div>
-        <span><strong>4.2</strong> (17 Reviews) on Google</span>
-      </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            Open Today: Closes 5:00 PM
+        </div>
+        <div class="info-item">
+            <i class="fas fa-check-circle"></i>
+            Licensed & Insured Plumber
+        </div>
     </div>
-  </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services section-padding">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Services</h2>
-        <p>Comprehensive plumbing and heating solutions for your home or business.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon blue">
-            <i class="fa-solid fa-faucet-drip"></i>
-          </div>
-          <h3>Plumbing Repairs</h3>
-          <p>From leaky faucets to burst pipes, our experienced plumbers provide fast and effective repair services.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon orange">
-            <i class="fa-solid fa-fire-flame-curved"></i>
-          </div>
-          <h3>Heating Systems</h3>
-          <p>Furnace repair, maintenance, and installation to keep your home warm during the cold Minnesota winters.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon blue">
-            <i class="fa-solid fa-bath"></i>
-          </div>
-          <h3>Installations</h3>
-          <p>Professional installation of water heaters, toilets, sinks, and complete HVAC systems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About / Reviews Section -->
-  <section id="reviews" class="reviews section-padding bg-light">
-    <div class="container">
-      <div class="reviews-layout">
-        <div class="reviews-text">
-          <h2>Trusted by Litchfield Residents</h2>
-          <p>At Rick Plumbing & Heating, we pride ourselves on delivering top-notch service with a focus on customer satisfaction. With a 4.2-star rating from our local community, you can trust us to get the job done right.</p>
-          <a href="https://maps.google.com/?q=Rick+Plumbing+%26+Heating+22+E+3rd+St,+Litchfield,+MN+55355" target="_blank" class="btn btn-outline">Read Our Reviews <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <div class="review-highlight">
-          <div class="review-card">
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <i class="fas fa-faucet fa-3x" style="color:var(--primary)"></i>
+                <h3>General Plumbing</h3>
+                <p>Leaks, repairs, and installations for all your residential plumbing needs.</p>
             </div>
-            <p>"Excellent service! They came out quickly when our furnace stopped working and had it fixed in no time. Highly recommend Rick and his team."</p>
-            <span class="reviewer">- Local Customer</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact section-padding">
-    <div class="container">
-      <div class="section-header">
-        <h2>Visit or Contact Us</h2>
-        <p>We're here to help with all your plumbing and heating needs.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <h4>Address</h4>
-              <p>22 E 3rd St<br>Litchfield, MN 55355</p>
-              <a href="https://maps.google.com/?q=22+E+3rd+St,+Litchfield,+MN+55355" target="_blank" class="text-link">Get Directions</a>
+            <div class="card">
+                <i class="fas fa-fire fa-3x" style="color:var(--primary)"></i>
+                <h3>Heating Systems</h3>
+                <p>Expert maintenance and repair for furnaces, boilers, and heating units.</p>
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <h4>Phone</h4>
-              <p>(320) 693-3611</p>
-              <a href="tel:+13206933611" class="text-link">Call Now</a>
+            <div class="card">
+                <i class="fas fa-tint fa-3x" style="color:var(--primary)"></i>
+                <h3>Water Heaters</h3>
+                <p>Quick repairs and energy-efficient installations of modern water heaters.</p>
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fa-solid fa-clock"></i>
-            <div>
-              <h4>Business Hours</h4>
-              <p>Opens 7:30 AM Wednesday<br><em>Call for standard operating hours and emergency services.</em></p>
-            </div>
-          </div>
         </div>
-        <div class="contact-map">
-          <!-- Placeholder for Google Maps iframe -->
-          <div class="map-placeholder">
-            <i class="fa-solid fa-map-location-dot"></i>
-            <h3>Litchfield, Minnesota</h3>
-            <p>Plus Code: 4FHF+93</p>
-            <a href="https://maps.google.com/?q=22+E+3rd+St,+Litchfield,+MN+55355" target="_blank" class="btn btn-primary mt-3">Open in Google Maps</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3><i class="fa-solid fa-wrench"></i> Rick Plumbing & Heating</h3>
-          <p>Your trusted local experts in Litchfield, MN.</p>
+    <section id="about" style="background: var(--light);">
+        <h2 class="section-title">About Us</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>Rick Plumbing & Heating is Litchfield's trusted local specialist. We take pride in delivering high-quality craftsmanship, fair pricing, and dependable service to our community. From minor leaks to major heating overhauls, Rick has you covered.</p>
         </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Rick Plumbing & Heating. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="scripts.js"></script>
+    <footer>
+        <p>&copy; 2023 Rick Plumbing & Heating</p>
+        <p>22 E 3rd St, Litchfield, MN 55355</p>
+        <p><a href="https://www.google.com/maps?q=Rick+Plumbing+%26+Heating+Litchfield+MN" class="map-link" target="_blank">View on Google Maps (4FHF+93)</a></p>
+    </footer>
+
 </body>
 </html>
